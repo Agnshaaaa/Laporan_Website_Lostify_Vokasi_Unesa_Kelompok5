@@ -1,0 +1,275 @@
+/* Variabel Warna Lostify */
+:root {
+  --kuning: #FFD700;
+  --hitam: #121212;
+  --putih: #ffffff;
+  --abu-bg: #f4f7f6;
+  --abu-card: #1e1e1e;
+  --shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--abu-bg);
+  margin: 0;
+  transition: 0.3s;
+  color: var(--hitam);
+}
+
+/* --- HALAMAN LOGIN & REGISTER (Centered) --- */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  background: var(--putih);
+  padding: 35px;
+  border-radius: 20px;
+  border-top: 10px solid var(--kuning);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* --- DASHBOARD / INDEX --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--kuning);
+  color: var(--kuning);
+}
+
+.nav-links a {
+  color: var(--putih);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+  position: relative;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--kuning);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after, 
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.welcome-banner {
+  background: linear-gradient(135deg, var(--hitam) 0%, #333 100%);
+  color: var(--putih);
+  margin: 30px 50px;
+  padding: 50px;
+  border-radius: 25px;
+  border-left: 10px solid var(--kuning);
+  box-shadow: var(--shadow);
+}
+.welcome-banner h1 span { color: var(--kuning); }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0 50px;
+  margin-top: -40px;
+}
+
+/* --- PERBAIKAN STAT CARD --- */
+.stat-card {
+    background: var(--putih);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    border-bottom: 5px solid var(--kuning);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.stat-card:hover { 
+    transform: translateY(-10px); 
+}
+
+.stat-card h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--hitam), #444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px 0;
+}
+
+.stat-card p {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- UI ELEMENTS --- */
+#dark-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--hitam);
+    border-radius: 30px;
+    background: var(--kuning);
+    color: var(--hitam);
+    z-index: 10000;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.dark #dark-toggle {
+    background: var(--hitam);
+    color: var(--kuning);
+    border: 2px solid var(--kuning);
+}
+
+/* --- DARK MODE --- */
+body.dark { background-color: #000; color: white; }
+.dark .auth-container, .dark .stat-card { background: var(--abu-card); color: white; }
+.dark .welcome-banner { border-bottom: 1px solid var(--kuning); }
+
+/* --- NOTIFIKASI --- */
+.notification-success, .notification-error {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10001;
+    font-weight: bold;
+    animation: slideIn 0.5s ease-out;
+    color: white;
+}
+
+.notification-success { background-color: #28a745; }
+.notification-error { background-color: #dc3545; }
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: var(--hitam);
+  color: var(--kuning);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.user-profile {
+    font-size: 14px;
+    font-weight: 600;
+}
+.user-profile strong {
+    color: var(--kuning);
+}
+
+/* --- FOOTER --- */
+.footer-container {
+    background-color: var(--hitam);
+    color: var(--putih);
+    padding: 50px 50px 20px 50px;
+    margin-top: 50px;
+    border-top: 3px solid var(--kuning);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand h2 { color: var(--kuning); margin-bottom: 15px; }
+.footer-links ul { list-style: none; padding: 0; }
+.footer-links ul li a { color: var(--putih); text-decoration: none; transition: 0.3s; }
+.footer-links ul li a:hover { color: var(--kuning); }
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.info-box { color: #121212; }
+.dark .info-box { color: #ffffff; background: #1e1e1e !important; }
+
+/* --- DARK MODE ADJUSTMENTS --- */
+.dark .contact-header, .dark .about-hero { background-color: var(--abu-card); color: var(--putih); }
+.dark .stat-card h3, .dark .stat-card p, .dark .stat-card strong { color: var(--putih) !important; }
+.dark input, .dark textarea, .dark select { background-color: #333; color: white; border: 1px solid var(--kuning); }
+
+/* Notifikasi Atas Tengah */
+.notif-center {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    z-index: 10002;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: fadeInDown 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notif-center.success { background: var(--kuning); color: var(--hitam); border: 2px solid var(--hitam); }
+.notif-center.error { background: #ff4d4d; color: white; border: 2px solid #fff; }
+
+@keyframes fadeInDown {
+    from { top: -50px; opacity: 0; }
+    to { top: 20px; opacity: 1; }
+}

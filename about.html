@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>About Lostify</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            background: var(--putih);
+            margin: 30px 50px;
+            padding: 80px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-bottom: 5px solid var(--kuning);
+        }
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .tech-tag {
+            background: #eee;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LOSTIFY</div>
+        <nav class="nav-links">
+            <a href="index.php">Dashboard</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+    </header>
+
+    <div class="about-hero">
+        <h1>Tentang Lostify</h1>
+        <p>Your Journey to Honesty</p>
+        <p style="max-width: 700px; margin: 20px auto;">Platform manajemen barang hilang dan ditemukan yang dirancang khusus untuk mempermudah civitas akademika Vokasi UNESA dalam saling membantu.</p>
+    </div>
+
+    <section style="margin: 0 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+        <div class="stat-card" style="text-align: left;">
+            <h3>👥 Untuk Siapa?</h3>
+            <ul style="padding-left: 20px; line-height: 2;">
+                <li>Mahasiswa yang kehilangan barang di kampus.</li>
+                <li>Civitas yang menemukan barang tak bertuan.</li>
+                <li>Petugas keamanan kampus untuk verifikasi data.</li>
+            </ul>
+        </div>
+        <div class="stat-card" style="text-align: left;">
+            <h3>⚙️ Teknologi Kami</h3>
+            <div class="tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">PHP 8.2</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+            </div>
+        </div>
+    </section>
+<footer class="footer-container">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>LOSTIFY – Vokasi UNESA</h2>
+            <p>Platform terpercaya untuk mengelola laporan kehilangan dan penemuan barang di lingkungan kampus.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Navigasi Cepat</h3>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Kontak Resmi</h3>
+            <p>📧 support@lostify-unesa.com</p>
+            <p>📍 Kampus Ketintang, Surabaya</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Lostify. All rights reserved.</p>
+    </div>
+</footer>
+    </body>
+</html>

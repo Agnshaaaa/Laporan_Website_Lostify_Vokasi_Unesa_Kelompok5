@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login LOSTIFY</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <h2>Login LOSTIFY</h2>
+        <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Masuk untuk melaporkan atau mencari barang</p>
+        
+        <form action="backend/login.php" method="POST">
+            <input type="text" name="identity" placeholder="Username atau Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <button type="submit" style="background: #1a1a1a; color: #ffcc00; font-weight: bold; margin-top: 10px;">Login</button>
+        </form>
+
+        <p style="margin-top: 20px; font-size: 14px;">
+            Belum punya akun? <a href="register.html" style="color: #ffcc00; font-weight: bold; text-decoration: none;">Daftar di sini</a>
+        </p>
+    </div>
+
+    <button id="dark-toggle" style="position: fixed; bottom: 20px; right: 20px; background: #ffcc00; border-radius: 20px; padding: 10px 20px; border: 2px solid #000; font-weight: bold;">🌙 Dark Mode</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

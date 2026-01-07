@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar LOSTIFY</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="auth-page">
+    <button id="dark-toggle">🌓 Mode</button>
+
+    <div class="auth-container">
+        <h2>Daftar LOSTIFY</h2>
+        <form action="backend/register.php" method="POST">
+            <input type="text" name="nama_lengkap" placeholder="Full name" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="no_telp" placeholder="Phone (08...)" required>
+            
+            <select name="prodi" required>
+                <option value="">-- Pilih Prodi Vokasi --</option>
+                <option>D4 Teknik Mesin</option>
+                <option>D4 Teknik Listrik</option>
+                <option>D4 Teknik Sipil</option>
+                <option>D4 Transportasi</option>
+                <option>D4 Teknologi Rekayasa Otomotif</option>
+                <option>D4 Administrasi Negara</option>
+                <option>D4 Manajemen Informatika</option>
+                <option>D4 Desain Grafis</option>
+                <option>D4 Produksi Media</option>
+                <option>D4 Tata Boga</option>
+                <option>D4 Tata Busana</option>
+                <option>D4 Kepelatihan Olahraga</option>
+                <option>D4 Analisis Performa Olahraga</option>
+            </select>
+            
+            <input type="password" name="password" placeholder="Password Baru" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p style="margin-top: 20px; font-size: 14px;">
+            Sudah punya akun? <a href="login.html" style="color: var(--kuning); font-weight: bold; text-decoration: none;">Login di sini</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

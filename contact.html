@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hubungi Kami - Lostify</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            padding: 0 50px;
+            margin-top: 30px;
+        }
+        .contact-header {
+            background: var(--putih);
+            margin: 30px 50px;
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-bottom: 5px solid var(--kuning);
+        }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 120px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">LOSTIFY</div>
+        <nav class="nav-links">
+            <a href="index.php">Dashboard</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact-header">
+        <h1>Hubungi Kami</h1>
+        <p>Ada pertanyaan atau kendala? Silakan hubungi tim pengembang kami di bawah ini.</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="stat-card" style="text-align: left;">
+            <h3>💬 Form Kendala & Masukan</h3>
+            <p style="font-size: 14px; color: #666; margin-bottom: 20px;">Isi form di bawah untuk membantu kami mengembangkan aplikasi yang lebih baik.</p>
+            <form action="backend/send_feedback.php" method="POST">
+                <input type="text" name="nama" placeholder="Nama Lengkap *" required>
+                <input type="email" name="email" placeholder="Email Aktif *" required>
+                <textarea name="pesan" placeholder="Ceritakan kendala atau saran Anda..." required></textarea>
+                <button type="submit" style="background: var(--kuning); color: var(--hitam); border: none; padding: 12px 25px; border-radius: 8px; font-weight: bold; cursor: pointer;">Kirim Masukan</button>
+            </form>
+        </div>
+
+        <div class="stat-card" style="text-align: left;">
+            <h3>📧 Informasi Kontak</h3>
+            <div style="margin-top: 20px;">
+                <p><strong>Email:</strong><br>admin.lostify@unesa.ac.id</p>
+                <p style="margin-top: 15px;"><strong>Jam Operasional Admin:</strong><br>Senin - Jumat (08.00 - 16.00 WIB)</p>
+                <p style="margin-top: 15px;"><strong>Lokasi Fisik:</strong><br>Gedung Vokasi, Lantai 1, Unit Pelayanan Mahasiswa.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>LOSTIFY – Vokasi UNESA</h2>
+                <p>Membantu civitas akademika menemukan kembali barang berharga mereka dengan transparansi data.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Navigasi Cepat</h3>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Hubungi Kami</h3>
+                <p>📧 support@lostify-unesa.com</p>
+                <p>🎓 Universitas Negeri Surabaya</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lostify. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="dark-toggle">🌙 Mode Gelap</button>
+    <script src="script.js"></script>
+
+</body>
+</html>
